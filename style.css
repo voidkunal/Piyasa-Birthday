@@ -1,0 +1,315 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    color: #ffffff
+}
+
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    width : auto;
+    height : 70px;
+    margin-right: 3vw;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    margin-inline: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 11px;
+
+}
+
+ul li a:hover, ul li a :active {
+    color : #ffffff;
+    transition: 0.5s;
+}  
+
+.icon{
+    align-items: center;
+    font-size: 30px;
+    margin-right: 12px;
+    display: none;
+}
+
+.video-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-bg1, #video-bg2 {
+    position: fixed;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    width:  100%;   /* Full viewport width */
+    height: 100%;  /* Full viewport height */ 
+    z-index: -1; /* Ensure the video stays behind other content */
+    transform: translate(-50%, -50%);
+  }
+
+  #video-bg2 {
+    display: none;
+  }
+
+  .box1 {
+    position: relative;
+    display: flex;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(2.5vw, 2vh);
+    background-image: url('panoti\ 3.jpg');
+    background-size: cover;
+    background-position: calc(center);
+    background-repeat: no-repeat;
+    animation: change-image 5s linear 0s infinite alternate-reverse;
+}
+
+.box2{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(82.5vw, -25vh);
+    background-image: url('piyasa10.jpg');
+    background-size: cover;
+    background-position: calc(center);
+    background-repeat: no-repeat;
+    animation: change-image 5s linear 0s infinite alternate-reverse;
+}
+
+@keyframes change-image {
+    0%{
+        background-image: url('Screenshot\ 2024-04-14\ 011024.png');
+    }
+
+    10%{
+        background-image: url('pic-scroll/panoti 1 (5).jpg');
+    }
+
+    20%{
+        background-image: url('pic-scroll/20231015_134953.jpg');
+    }
+
+    30%{
+        background-image: url('pic-scroll/panoti 1 (1).jpg');
+    }
+
+    40%{
+        background-image: url('pic-scroll/panoti 1 (2).jpg');
+    }
+
+    50%{
+        background-image: url('pic-scroll/panoti 1 (3).jpg');
+    }
+
+    60%{
+        background-image: url('pic-scroll/panoti 1 (4).jpg');
+    }
+
+    70%{
+        background-image: url('pic-scroll/panoti 1 (6).jpg');
+    }
+
+    80%{
+        background-image: url('pic-scroll/panoti 2.jpg');
+    }
+
+    90%{
+        background-image: url('pic-scroll/panoti 3.jpg');
+    }
+
+    100%{
+        background-image: url('pic-scroll/piyasa10.jpg');
+    }
+
+}
+
+
+footer {
+    margin-top: 15px;
+}
+
+.foot {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width : 100%;
+    height: 60px;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 33.8vh;
+}
+
+.pages {
+   
+    padding-top: 15px;
+}
+
+.copyright {
+   
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+
+    nav ul {
+       text-overflow: hidden;
+       display: none;
+    }
+
+
+    .icon{
+        display: flex;
+        cursor: pointer;
+    }
+
+    .showData{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        top: 35px;
+        box-shadow: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        padding: 0px;
+        gap: 25px;
+    }
+
+    #video-bg1 {
+        display: none; /* Hide the desktop video on mobile devices */
+    }
+    #video-bg2 {
+        display: block; /* Show the mobile video on smaller screens */
+    }
+
+    .box1{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: translate(8px, 175px);
+        background-image: url('Screenshot\ 2024-04-14\ 011024.png');
+        background-size: cover;
+        background-position: calc(center);
+        background-repeat: no-repeat;
+        animation: change-image 5s linear 0s infinite alternate-reverse;
+    }
+
+    .box2{
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: translate(260px, 89px);
+        background-image: url('Screenshot\ 2024-04-14\ 011024.png');
+        background-size: cover;
+        background-position: calc(center);
+        background-repeat: no-repeat;
+        animation: change-image 5s linear 0s infinite alternate-reverse;
+    }
+
+    @keyframes change-image {
+        0%{
+            background-image: url('Screenshot\ 2024-04-14\ 011024.png');
+        }
+
+        10%{
+            background-image: url('pic-scroll/panoti 1 (5).jpg');
+        }
+
+        20%{
+            background-image: url('pic-scroll/20231015_134953.jpg');
+        }
+
+        30%{
+            background-image: url('pic-scroll/panoti 1 (1).jpg');
+        }
+
+        40%{
+            background-image: url('pic-scroll/panoti 1 (2).jpg');
+        }
+
+        50%{
+            background-image: url('pic-scroll/panoti 1 (3).jpg');
+        }
+
+        60%{
+            background-image: url('pic-scroll/panoti 1 (4).jpg');
+        }
+
+        70%{
+            background-image: url('pic-scroll/panoti 1 (6).jpg');
+        }
+
+        80%{
+            background-image: url('pic-scroll/panoti 2.jpg');
+        }
+
+        90%{
+            background-image: url('pic-scroll/panoti 3.jpg');
+        }
+
+        100%{
+            background-image: url('pic-scroll/piyasa10.jpg');
+        }
+
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+    
+    .foot {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        height: 100px;
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 53.8vh;
+    }
+    
+    .pages {
+       
+        padding-top: 15px;
+    }
+    
+    .copyright {
+       
+        padding-top: 5px;
+    }
+    
+}
